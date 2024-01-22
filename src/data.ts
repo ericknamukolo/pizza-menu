@@ -1,7 +1,7 @@
 import { Pizza } from './models/pizza';
 import './index.css';
 
-const pizzaData: Pizza[] = [
+export const pizzaData: Pizza[] = [
   {
     name: 'Focaccia',
     ingredients: 'Bread with italian olive oil and rosemary',

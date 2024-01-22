@@ -1,13 +1,18 @@
-import React, { Fragment } from 'react';
-import PizzaCard from './components/pizza-card';
+import React, { useState } from 'react';
 import Header from './components/header';
 import HomeContainer from './containers/home-container';
+import Menu from './components/menu';
+import { pizzaData } from './data';
+import Footer from './components/footer';
 
 function App() {
+  const [pizzas, setPizzas] = useState(pizzaData);
+
   return (
     <HomeContainer>
       <Header />
-      <PizzaCard />
+      <Menu pizzas={pizzas} />
+      <Footer />
     </HomeContainer>
   );
 }
