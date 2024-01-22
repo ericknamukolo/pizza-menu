@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import PizzaCard from './components/pizza-card';
+import Header from './components/header';
+import HomeContainer from './containers/home-container';
 
 function App() {
   return (
-    <div className='App'>
-      <h1>Hello world</h1>
-    </div>
+    <HomeContainer>
+      <Header />
+      <PizzaCard />
+    </HomeContainer>
   );
 }
 
