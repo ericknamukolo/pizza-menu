@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import '../index.css';
 
 const Footer = () => {
   return (
-    <footer className='footer'>
-      {new Date().toLocaleTimeString()}. We're currently open
-    </footer>
+    <Fragment>
+      <footer className='footer'>
+        {new Date().toLocaleTimeString()}. We're currently open
+      </footer>
+      <button className='btn'>Order now</button>
+    </Fragment>
   );
 };
 
