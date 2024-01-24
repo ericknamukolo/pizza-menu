@@ -2,14 +2,14 @@ import React from 'react';
 import { Pizza } from '../models/pizza';
 import '../index.css';
 
-const PizzaCard: React.FC<{ pizza: Pizza }> = (props) => {
+const PizzaCard: React.FC<{ pizza: Pizza }> = ({ pizza }) => {
   return (
-    <div className='pizza'>
-      <img src={props.pizza.photoName} alt={props.pizza.name} />
+    <div className={`pizza ${pizza.soldOut && 'sold-out'}`}>
+      <img src={pizza.photoName} alt={pizza.name} />
       <div>
-        <h3>{props.pizza.name}</h3>
-        <p>{props.pizza.ingredients}</p>
-        <span>{props.pizza.price}</span>
+        <h3>{pizza.name}</h3>
+        <p>{pizza.ingredients}</p>
+        <span>{pizza.soldOut ? 'SOLD OUT' : pizza.price}</span>
       </div>
     </div>
   );
