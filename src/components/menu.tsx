@@ -7,9 +7,11 @@ const Menu: React.FC<{ pizzas: Pizza[] }> = (props) => {
   return (
     <main className='menu'>
       <h2>Our Menu</h2>
-      {props.pizzas.map((pizza) => (
-        <PizzaCard pizza={pizza} key={pizza.name + pizza.photoName} />
-      ))}
+      <div className='pizzas'>
+        {props.pizzas.map((pizza) => (
+          <PizzaCard pizza={pizza} key={pizza.name + pizza.photoName} />
+        ))}
+      </div>
     </main>
   );
 };
