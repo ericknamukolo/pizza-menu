@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PizzaCard from './pizza-card';
 import { Pizza } from '../models/pizza';
 import '../index.css';

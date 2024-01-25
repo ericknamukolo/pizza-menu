@@ -6,7 +6,7 @@ import { pizzaData } from './data';
 import Footer from './components/footer';
 
 function App() {
-  const [pizzas, setPizzas] = useState(pizzaData);
+  const [pizzas] = useState(pizzaData);
 
   return (
     <HomeContainer>
